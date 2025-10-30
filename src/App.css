@@ -1,0 +1,15 @@
+/* App Container */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+/* Ensure no horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+

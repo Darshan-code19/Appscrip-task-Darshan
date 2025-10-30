@@ -1,0 +1,158 @@
+.plp-page {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+/* Section above grid */
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.products-header p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sort-bar input {
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.sort-bar select {
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: 600;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Main grid + sidebar layout */
+.plp-content {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  padding: 30px 60px;
+  box-sizing: border-box;
+}
+
+.plp-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Tablet Styles (1024px and below) */
+@media (max-width: 1024px) {
+  .products-header {
+    padding: 16px 30px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .sort-bar {
+    gap: 12px;
+  }
+
+  .sort-bar input {
+    min-width: 150px;
+    font-size: 13px;
+  }
+
+  .sort-bar select {
+    font-size: 13px;
+  }
+
+  .plp-content {
+    padding: 24px 30px;
+    gap: 30px;
+  }
+
+  .plp-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablet Small (768px and below) */
+@media (max-width: 768px) {
+  .products-header {
+    padding: 14px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .products-header p {
+    font-size: 13px;
+  }
+
+  .sort-bar {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .sort-bar input,
+  .sort-bar select {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .plp-content {
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .plp-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .products-header {
+    padding: 12px 16px;
+  }
+
+  .products-header p {
+    font-size: 12px;
+  }
+
+  .sort-bar input,
+  .sort-bar select {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .plp-content {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .plp-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
